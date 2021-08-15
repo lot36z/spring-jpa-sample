@@ -1,0 +1,7 @@
+spring:
+    jpa:
+        database: POSTGRESQL
+    datasource:
+        url: jdbc:postgresql://localhost:5432/jpa
+        username: jpa
+        password: password
