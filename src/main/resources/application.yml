@@ -1,7 +1,22 @@
 spring:
     jpa:
         database: POSTGRESQL
+        hibernate:
+            ddl-auto: update
     datasource:
         url: jdbc:postgresql://localhost:5432/jpa
         username: jpa
         password: password
+logging:
+    file:
+        name: .log/application.log
+    level:
+        org.hibernate:
+            SQL: debug
+            type:
+                descriptor:
+                    sql:
+                        BasicBinder: trace
+                EnumType: trace
+        org.springframework.orm.jpa: DEBUG
+        org.springframework.transaction: DEBUG
